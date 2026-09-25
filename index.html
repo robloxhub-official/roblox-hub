@@ -1,81 +1,185 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roblox Hub</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#0b0b0f;color:#fff}
-header{padding:35px 20px;text-align:center;background:linear-gradient(135deg,#160b0b,#0b0b0f);border-bottom:2px solid #e3262e}
-h1{font-size:42px;margin:0 0 8px;color:#ff3038}
-header p{color:#bbb}
-nav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:15px;background:#121217}
-nav a{color:white;text-decoration:none;padding:10px 15px;border-radius:8px;background:#1d1d25}
-nav a:hover{background:#e3262e}
-main{max-width:1000px;margin:auto;padding:25px 18px}
-.hero{padding:35px 20px;border-radius:16px;background:linear-gradient(135deg,#e3262e,#64151a);margin-bottom:25px}
-.hero h2{font-size:30px;margin-top:0}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.card{background:#15151c;border:1px solid #292933;border-radius:14px;padding:20px}
-.card h3{margin-top:0;color:#ff4a50}
-button{background:#e3262e;color:#fff;border:0;border-radius:8px;padding:10px 15px;cursor:pointer}
-footer{text-align:center;color:#888;padding:30px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Hub — Новости, Промокоды и Гайды</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; background: #0b0b0f; color: #fff; line-height: 1.6; }
+        header { padding: 35px 20px; text-align: center; background: linear-gradient(135deg, #160800, #0b0b0f); border-bottom: 1px solid #292933; }
+        h1 { font-size: 42px; margin: 0; color: #ff4a50; text-transform: uppercase; letter-spacing: 2px; }
+        header p { color: #bbb; margin-top: 5px; }
+        
+        nav { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; padding: 15px; background: #121217; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #292933; }
+        nav a { color: #fff; text-decoration: none; padding: 8px 16px; border-radius: 8px; background: #1d1d25; transition: 0.3s; font-weight: 600; }
+        nav a:hover { background: #ff4a50; }
+        
+        main { max-width: 1000px; margin: 0 auto; padding: 25px 15px; }
+        .search-box { width: 100%; padding: 14px; border-radius: 10px; border: 1px solid #292933; background: #151b2c; color: #fff; font-size: 16px; margin-bottom: 25px; outline: none; }
+        
+        .hero { padding: 30px 20px; border-radius: 14px; background: linear-gradient(135deg, #2d262a, #14151a); margin-bottom: 30px; text-align: center; border: 1px solid #3d3238; }
+        .hero h2 { font-size: 28px; margin-top: 0; color: #ff7b7f; }
+        
+        .section-title { font-size: 24px; color: #ff4a50; margin-top: 40px; margin-bottom: 15px; border-left: 4px solid #ff4a50; padding-left: 10px; }
+        
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+        .card { background: #151b2c; border: 1px solid #292933; border-radius: 14px; padding: 20px; }
+        .card h3 { margin-top: 0; color: #ff4a50; }
+        
+        .code-box { display: flex; justify-content: space-between; align-items: center; background: #0b0b0f; padding: 10px 15px; border-radius: 8px; margin-top: 10px; border: 1px dashed #ff4a50; }
+        .code-text { font-weight: bold; color: #50fa7b; letter-spacing: 1px; }
+        .btn-copy { background: #ff4a50; color: #fff; border: none; border-radius: 6px; padding: 6px 12px; cursor: pointer; font-weight: bold; }
+        .btn-copy:hover { background: #e03e44; }
+        
+        .trade-calc { background: #151b2c; border-radius: 14px; padding: 20px; border: 1px solid #292933; }
+        .trade-inputs { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px; }
+        .trade-inputs input { flex: 1; padding: 10px; border-radius: 8px; border: 1px solid #292933; background: #0b0b0f; color: #fff; min-width: 140px; }
+        .btn-calc { background: #ff4a50; color: #fff; border: none; border-radius: 8px; padding: 10px 20px; font-weight: bold; cursor: pointer; width: 100%; }
+        
+        footer { text-align: center; color: #888; padding: 30px; margin-top: 40px; border-top: 1px solid #292933; font-size: 14px; }
+    </style>
 </head>
 <body>
-<header>
-<h1>ROBLOX HUB</h1>
-<p>Новости, гайды и полезные советы для игроков Roblox</p>
-</header>
 
-<nav>
-<a href="#news">Новости</a>
-<a href="#guides">Гайды</a>
-<a href="#trades">Трейды</a>
-<a href="#about">О сайте</a>
-</nav>
+    <header>
+        <h1>ROBLOX HUB</h1>
+        <p>Свежие промокоды, обзоры обновлений и гайды по трейдам</p>
+    </header>
 
-<main>
-<section class="hero">
-<h2>Добро пожаловать в Roblox Hub 🎮</h2>
-<p>Здесь будут гайды по играм Roblox, советы по трейдам и интересные новости.</p>
-<button onclick="alert('Новые материалы скоро появятся!')">Смотреть материалы</button>
-</section>
+    <nav>
+        <a href="#codes">🎁 Промокоды</a>
+        <a href="#news">📰 Новости</a>
+        <a href="#trade">⚖️ Трейд-Калькулятор</a>
+        <a href="#guides">📚 Гайды</a>
+    </nav>
 
-<section id="news">
-<h2>📰 Новости</h2>
-<div class="cards">
-<div class="card"><h3>Новые игры</h3><p>Здесь можно публиковать обзоры новых популярных игр Roblox.</p></div>
-<div class="card"><h3>Обновления</h3><p>Рассказывай игрокам о важных обновлениях и событиях.</p></div>
-<div class="card"><h3>Ивенты</h3><p>Добавляй информацию о временных событиях и наградах.</p></div>
-</div>
-</section>
+    <main>
+        <input type="text" class="search-box" id="searchInput" onkeyup="searchFunction()" placeholder="Поиск по кодам, играм или новостям...">
 
-<section id="guides">
-<h2>📚 Гайды</h2>
-<div class="cards">
-<div class="card"><h3>Как начать играть?</h3><p>Простые инструкции для новичков.</p></div>
-<div class="card"><h3>Советы по трейдам</h3><p>Объясняй, как сравнивать предметы и не попадаться на обман.</p></div>
-<div class="card"><h3>Безопасность</h3><p>Никому не сообщай пароль и не вводи данные Roblox на подозрительных сайтах.</p></div>
-</div>
-</section>
+        <section class="hero">
+            <h2>Добро пожаловать в Roblox Hub!</h2>
+            <p>Здесь собраны самые свежие рабочие коды, новости обновлений и инструменты для выгодного обмена предметами в Roblox.</p>
+        </section>
 
-<section id="trades">
-<h2>💎 Трейды</h2>
-<div class="card">
-<p>В будущем здесь можно сделать раздел с предметами и пользовательскими предложениями обмена.</p>
-</div>
-</section>
+        <!-- РАЗДЕЛ ПРОМОКОДОВ -->
+        <h2 class="section-title" id="codes">🎁 Рабочие промокоды (2026)</h2>
+        <div class="cards">
+            <div class="card searchable">
+                <h3>Blox Fruits</h3>
+                <p>Награда: 2x EXP на 20 минут</p>
+                <div class="code-box">
+                    <span class="code-text">KITT_RESET</span>
+                    <button class="btn-copy" onclick="copyCode('KITT_RESET')">Копировать</button>
+                </div>
+            </div>
+            <div class="card searchable">
+                <h3>Pet Simulator 99</h3>
+                <p>Награда: Бесплатные бусты и монеты</p>
+                <div class="code-box">
+                    <span class="code-text">RELEASE</span>
+                    <button class="btn-copy" onclick="copyCode('RELEASE')">Копировать</button>
+                </div>
+            </div>
+            <div class="card searchable">
+                <h3>Adopt Me!</h3>
+                <p>Награда: 100 баксов и редкий предмет</p>
+                <div class="code-box">
+                    <span class="code-text">SUMMER2026</span>
+                    <button class="btn-copy" onclick="copyCode('SUMMER2026')">Копировать</button>
+                </div>
+            </div>
+        </div>
 
-<section id="about">
-<h2>ℹ️ О сайте</h2>
-<div class="card">
-<p>Roblox Hub — фанатский информационный сайт. Он не является официальным сайтом Roblox.</p>
-</div>
-</section>
-</main>
+        <!-- РАЗДЕЛ НОВОСТЕЙ -->
+        <h2 class="section-title" id="news">📰 Последние Новости</h2>
+        <div class="cards">
+            <div class="card searchable">
+                <h3>Обновление Blox Fruits</h3>
+                <p>Разработчики тизерят новый переработанный фрукт и новую локацию для 3-го моря! Релиз ожидает со дня на день.</p>
+            </div>
+            <div class="card searchable">
+                <h3>Ивент Roblox The Hunt 2</h3>
+                <p>Подробности о новом масштабном событии, в котором можно будет получить эксклюзивные бесплатные аксессуары для аватарки.</p>
+            </div>
+        </div>
 
-<footer>© 2026 Roblox Hub • Фанатский сайт</footer>
+        <!-- КАЛЬКУЛЯТОР ТРЕЙДОВ -->
+        <h2 class="section-title" id="trade">⚖️ Калькулятор Трейдов</h2>
+        <div class="trade-calc">
+            <p>Введите стоимость ваших предметов и предметов партнёра, чтобы узнать, выгоден ли обмен:</p>
+            <div class="trade-inputs">
+                <input type="number" id="myValue" placeholder="Ценность ваших вещей">
+                <input type="number" id="theirValue" placeholder="Ценность вещей партнёра">
+            </div>
+            <button class="btn-calc" onclick="checkTrade()">Проверить трейд</button>
+            <p id="tradeResult" style="margin-top: 15px; font-weight: bold; text-align: center;"></p>
+        </div>
+
+        <!-- РАЗДЕЛ ГАЙДОВ -->
+        <h2 class="section-title" id="guides">📚 Гайды и Советы</h2>
+        <div class="cards">
+            <div class="card searchable">
+                <h3>Как не попасться на скам при трейдах?</h3>
+                <p>Никогда не переходите по сторонним ссылкам и всегда перепроверяйте предметы в окне обмена перед нажатием «Accept».</p>
+            </div>
+            <div class="card searchable">
+                <h3>Быстрый старт в Blox Fruits</h3>
+                <p>Советы новичкам: какие фрукты лучше покупать в начале и на каких островах быстрее всего поднимать уровень.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Roblox Hub — Фанатский информационный сайт. Не связан с Roblox Corporation.</p>
+    </footer>
+
+    <script>
+        // Функция копирования кода
+        function copyCode(code) {
+            navigator.clipboard.writeText(code);
+            alert("Код " + code + " скопирован!");
+        }
+
+        // Простой калькулятор трейдов
+        function checkTrade() {
+            let myVal = Number(document.getElementById('myValue').value);
+            let theirVal = Number(document.getElementById('theirValue').value);
+            let result = document.getElementById('tradeResult');
+
+            if (!myVal || !theirVal) {
+                result.innerText = "Пожалуйста, введите оба значения!";
+                result.style.color = "#ff4a50";
+                return;
+            }
+
+            if (theirVal > myVal) {
+                result.innerText = "🟢 Выгодная сделка! Вы получаете больше.";
+                result.style.color = "#50fa7b";
+            } else if (theirVal === myVal) {
+                result.innerText = "🟡 Равноценный обмен.";
+                result.style.color = "#ffb86c";
+            } else {
+                result.innerText = "🔴 Невыгодный трейд! Вы уходите в минус.";
+                result.style.color = "#ff4a50";
+            }
+        }
+
+        // Поиск по странице
+        function searchFunction() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('searchable');
+
+            for (let i = 0; i < cards.length; i++) {
+                let text = cards[i].innerText.toLowerCase();
+                if (text.includes(input)) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </body>
 </html>
+
