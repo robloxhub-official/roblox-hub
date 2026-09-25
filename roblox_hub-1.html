@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roblox Hub</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#0b0b0f;color:#fff}
+header{padding:35px 20px;text-align:center;background:linear-gradient(135deg,#160b0b,#0b0b0f);border-bottom:2px solid #e3262e}
+h1{font-size:42px;margin:0 0 8px;color:#ff3038}
+header p{color:#bbb}
+nav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:15px;background:#121217}
+nav a{color:white;text-decoration:none;padding:10px 15px;border-radius:8px;background:#1d1d25}
+nav a:hover{background:#e3262e}
+main{max-width:1000px;margin:auto;padding:25px 18px}
+.hero{padding:35px 20px;border-radius:16px;background:linear-gradient(135deg,#e3262e,#64151a);margin-bottom:25px}
+.hero h2{font-size:30px;margin-top:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:#15151c;border:1px solid #292933;border-radius:14px;padding:20px}
+.card h3{margin-top:0;color:#ff4a50}
+button{background:#e3262e;color:#fff;border:0;border-radius:8px;padding:10px 15px;cursor:pointer}
+footer{text-align:center;color:#888;padding:30px}
+</style>
+</head>
+<body>
+<header>
+<h1>ROBLOX HUB</h1>
+<p>Новости, гайды и полезные советы для игроков Roblox</p>
+</header>
+
+<nav>
+<a href="#news">Новости</a>
+<a href="#guides">Гайды</a>
+<a href="#trades">Трейды</a>
+<a href="#about">О сайте</a>
+</nav>
+
+<main>
+<section class="hero">
+<h2>Добро пожаловать в Roblox Hub 🎮</h2>
+<p>Здесь будут гайды по играм Roblox, советы по трейдам и интересные новости.</p>
+<button onclick="alert('Новые материалы скоро появятся!')">Смотреть материалы</button>
+</section>
+
+<section id="news">
+<h2>📰 Новости</h2>
+<div class="cards">
+<div class="card"><h3>Новые игры</h3><p>Здесь можно публиковать обзоры новых популярных игр Roblox.</p></div>
+<div class="card"><h3>Обновления</h3><p>Рассказывай игрокам о важных обновлениях и событиях.</p></div>
+<div class="card"><h3>Ивенты</h3><p>Добавляй информацию о временных событиях и наградах.</p></div>
+</div>
+</section>
+
+<section id="guides">
+<h2>📚 Гайды</h2>
+<div class="cards">
+<div class="card"><h3>Как начать играть?</h3><p>Простые инструкции для новичков.</p></div>
+<div class="card"><h3>Советы по трейдам</h3><p>Объясняй, как сравнивать предметы и не попадаться на обман.</p></div>
+<div class="card"><h3>Безопасность</h3><p>Никому не сообщай пароль и не вводи данные Roblox на подозрительных сайтах.</p></div>
+</div>
+</section>
+
+<section id="trades">
+<h2>💎 Трейды</h2>
+<div class="card">
+<p>В будущем здесь можно сделать раздел с предметами и пользовательскими предложениями обмена.</p>
+</div>
+</section>
+
+<section id="about">
+<h2>ℹ️ О сайте</h2>
+<div class="card">
+<p>Roblox Hub — фанатский информационный сайт. Он не является официальным сайтом Roblox.</p>
+</div>
+</section>
+</main>
+
+<footer>© 2026 Roblox Hub • Фанатский сайт</footer>
+</body>
+</html>
